@@ -1,0 +1,259 @@
+<?php
+/**
+ * Template Name: Client solutions 
+ * Description: Client solutions 
+ * The main template file.
+ * @package Fresh Theme
+ */
+
+get_header(); ?>
+
+	<section id="home_wall" class="twoborders home_wall_small">
+
+		<div class="gallerycontainer nocarousel" style="background-image: url('<?php the_field('wall_background'); ?>');">
+		</div>
+
+	</section>
+
+	<section id="home_subwall">
+	    <div class="container">
+	        <h2 class="topbuttons">Our services</h2>
+	        <div class="row divff divffwithbuttons">
+	            <a href="#cs_intro" class="button button_white">About our services</a>
+	            <a href="#cs_areasof" class="button button_white">Areas of expertise</a>
+	            <a href="#cs_ourclients" class="button button_white">Our clients</a>
+	            <a href="#cs_testimonial_grey" class="button button_white">Testimonial</a>
+	            <a href="#wa_recruitment" class="button button_white">Contact</a>
+	        </div> 
+	    </div>
+	</section>
+
+	<section id="cs_intro">
+	    <div class="container">
+	        <div class="row rowflex">
+	            <div class="col-m-6 col-xs-12">
+	                <h3><?php the_field('client_solutions_title'); ?></h3>
+	                <p><?php the_field('client_solutions_text'); ?></p>
+
+	                <?php if ( get_field("button_on_off") ) : ?>
+
+	                    <a href="<?php the_field('internal_link'); ?><?php the_field('external_link'); ?>" target="_blank" class="button button_grey"><?php the_field('button_text'); ?></a>
+	                    
+	                <?php endif; ?>
+	                
+	            </div>
+	            <div class="col-m-6 col-xs-12">
+	                <div class="cs_imageholder"> 
+	                	<?php 
+	                		$first = get_field('image');
+	                		$url = $first[0]['url'];
+	                	 ?>
+	                    <img src="<?php echo $url; ?>" /> 
+	                </div>
+	                <div class="cs_thumbsholder">
+
+						<?php
+
+						    if( have_rows('image') ):
+						        $count = 1;
+						        while ( have_rows('image') ) : the_row();
+						    ?>
+
+								<div class="preview <?php if ($count == 1) { ?> preview_active <?php } ?>">
+								    <img src="<?php the_sub_field('url'); ?>" /> 
+								    <div class="preview_marker"></div>
+								</div>
+
+						    <?php
+
+						        $count++; endwhile;
+
+						    else :
+						    endif;
+
+						?>
+
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+    <section class="testimonial2 testimonial_small2" id="cs_testimonial">
+        <div class="slider-control ts1" id="control-left">
+	        <svg viewBox="0 0 30 60">
+	            <g filter="">
+	                <use xlink:href="#arrowleft"></use>
+	            </g>
+	        </svg>
+	    </div>
+        <div class="slider-control ts1" id="control-right">
+	        <svg viewBox="0 0 30 60">
+	            <g filter="">
+	                <use xlink:href="#arrowright"></use>
+	            </g>
+	        </svg>
+        </div>
+        <ul>
+
+            <?php
+
+	            if( have_rows('testimonial') ):
+
+	                while ( have_rows('testimonial') ) : the_row();
+	            ?>
+	            		
+	            		<li style="background-image: url(<?php the_sub_field('background_image'); ?>);">
+	            		    <div class="container">
+	            		        <div class="row rowflex">
+	            		            <div class="col-m-6 col-xs-3">
+	            		            </div>
+	            		            <div class="col-m-6 col-xs-9 colflex">
+	            		                <p class="bluearea_message">
+	            		                    <?php the_sub_field('message'); ?>
+	            		                </p>
+	            		            </div>
+	            		        </div>
+	            		    </div>
+	            		</li>
+
+	            <?php
+
+	               	endwhile;
+
+	            else :
+	            endif;
+
+            ?>
+
+        </ul>
+    </section>
+
+	<section id="cs_areasof">
+	    <div class="container">
+	        <h2 class="title"><?php the_field('title'); ?></h2>
+	        <p class="intro"><?php the_field('text'); ?></p>
+<!-- 	        <div class="row rowflex"> -->
+	            <div class="tabs">
+
+	            <?php
+
+	                if( have_rows('area') ):
+	                    $count = 1;
+	                    while ( have_rows('area') ) : the_row();
+	                ?>
+	                       
+	                       <div class="tab">
+	                           <input class="tab-radio" type="radio" id="tab-<?php echo $count; ?>" name="tabs" <?php if ($count == 1) { ?> checked='checked' <?php } ?>>
+	                           <label class="tab-label" for="tab-<?php echo $count; ?>"><?php the_sub_field('label'); ?></label>
+	                           <div class="tab-panel">
+	                               <div class="tab-content">
+	                                   <div class="row row_padding">
+	                                       <div class="col-m-3">
+	                                           <img src="<?php the_sub_field('tab_image'); ?>">
+	                                       </div>
+	                                       <div class="col-m-9">
+	                                           <div class="tab_area_description">
+<!-- 			                                <h3><?php the_sub_field('tab_title'); ?></h3> -->
+				                                <p><?php the_sub_field('tab_text'); ?></p>
+
+				                                <?php if ( get_field("button_on_off") ) : ?>
+
+				                                    <a href="<?php the_field('internal_link'); ?><?php the_field('external_link'); ?>" class="button button_grey"><?php the_field('button_text'); ?></a>
+
+				                                <?php endif; ?>
+	                                           </div>
+	                                       </div>
+	                                   </div>
+	                               </div>
+	                           </div>
+	                       </div>
+	                       
+	                <?php
+
+	                    $count++; endwhile;
+
+	                else :
+	                endif;
+
+	            ?>
+
+	            </div>
+<!-- 	        </div> -->
+	    </div>
+	</section>
+
+<section id="cs_ourclients">
+    <div class="container">
+        <h2 class="title"><?php the_field('clients_title'); ?></h2>
+        <div class="clients_logos">   
+
+            <?php
+
+                if( have_rows('client') ):
+                    while ( have_rows('client') ) : the_row();
+                ?>
+                    
+                    <div class="client_logo">
+                         <img src="<?php the_sub_field('logo'); ?>">
+                     </div>
+
+                <?php
+
+                    endwhile;
+
+                else :
+                endif;
+
+            ?>                   
+
+        </div>  
+    </div>
+</section>
+
+<section class="testimonial2" id="cs_testimonial_grey" style="background-image: url(<?php the_field('background'); ?>);">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-12 col-xs-12 content">
+                <h2 class="title inpadding"><?php the_field('customer_testimonial_title'); ?></h2>
+                <p class="intro"><?php the_field('customer_testimonial_text'); ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="container sentence_container">
+        <div class="row rowflex multiborder whatstheheight">
+            <div class="col-m-3 col-xs-12 testtocenter">
+                <img src="<?php the_field('customer_image'); ?>" alt="" class="testimonial_rounded">
+            </div>
+            <div class="col-m-9 col-xs-12">
+                <p class="testimonial_sentence">"<?php the_field('customer_sentence'); ?>"</p>
+                <p class="testimonial_sign"><?php the_field('customer_sign'); ?></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="wa_recruitment">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-12 col-xs-12 content">
+                <h2 class="title inpadding"><?php the_field('conversation_title'); ?></h2>
+                <p class="intro"><?php the_field('conversation_text'); ?></p>
+
+                <?php if ( get_field("conversation_button_on_off") ) : ?>
+
+                    <a href="<?php the_field('conversation_button_link_internal'); ?><?php the_field('conversation_button_link_external'); ?>" class="button button_blue"><?php the_field('conversation_button_text'); ?></a>
+
+                <?php endif; ?>
+
+                <div class="formcontainer">
+                    <?php  gravity_form( 4, false, false, false, '', false );   ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php 
+get_footer();

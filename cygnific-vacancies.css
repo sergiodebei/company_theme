@@ -1,0 +1,235 @@
+#vs_introduction{
+     text-align:center;
+}
+#vs_interested #applynowform h2.title{
+     text-align:left;
+}
+#vacancy-back-button{
+     float: left; 
+}
+.gform_wrapper .gform_body {
+    color: #5e5e5e!important;
+}
+#vacancydetaildata {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    font: 400 15px/21px "Source Sans Pro",sans-serif!important;
+    color:#474747!important;
+}
+#vacancydetaildata strong{
+    color: #2692d8;
+    font-weight:normal;
+    font-style:italic;
+	text-transform: uppercase;
+}
+#vacancydetaildata ul {
+    color: #474747;
+    display: table;
+    font: 400 15px/21px "Source Sans Pro",sans-serif;
+}
+#vacancydetaildata li::before {
+    color: #2692d8;
+    content: "■ ";
+    display: table-cell;
+    font-size: 14px;
+    font-style: initial;
+    line-height: 10px;
+    padding: 0 10px;
+}
+#vacancydetaildata ul li {
+    display: table-row;
+}
+.column-title{
+	border-top: 4px solid #fff;
+	line-height: 40px !important;
+	color:#2692d8;
+	font-weight:normal;
+	font-style:italic;
+	margin-top:0!important;
+	display: block;
+}
+.succes-title{
+	line-height: 40px !important;
+	color:#2692d8;
+	font-weight:normal;
+	font-style:italic;
+	margin-top:0!important;
+	display: block;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_11.column-title, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_10.column-title, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_29, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_30, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_31{
+	margin-left:0!important;
+}
+.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label{
+	width:50%!important;
+	font-weight: normal;
+	line-height:20px;
+}
+.gform_wrapper ul.column_2.column_2.gform_fields:not(.top_label) .gfield_label{
+	width:29%!important;
+	font-weight: normal;
+	line-height:20px;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_29, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_30, 
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_31{
+	margin-bottom:0;
+	margin-top:30px!important;
+	padding-bottom:0;
+	font-weight:bold;
+}
+body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox{
+	margin-top:0!important;
+}
+.gform_wrapper ul li.gfield.field_sublabel_above.field_description_below + li.gfield{
+	margin-top:0!important;
+}
+h4.line-trough-title::before {
+    border-top: 1px solid #2692d8;
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 95%;
+    z-index: -1;
+}
+h4.line-trough-title {
+    position: relative;
+    z-index: 1;
+}
+h4.line-trough-title span {
+    background: #EAEAEA none repeat scroll 0 0;
+    padding-right: 15px;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_32,
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_33,
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_34 {
+	margin-left:0!important;
+	width:100%;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_33,
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_34 {
+	padding-top:30px;
+}
+.gform_wrapper select{
+	background-color:#dcdbdb;
+	border:0;
+}
+.gform_wrapper select {
+	padding: 4px 12px 4px 2px!important;
+}
+#input_1_12 label, #input_1_14 label{
+	display:none;
+}
+.gform_wrapper .gfield_date_day, 
+.gform_wrapper .gfield_date_month,
+.gform_wrapper .gfield_date_year{
+	max-width:100%!important;
+	width:100%!important;
+}
+.gform_wrapper .gfield_date_day input, 
+.gform_wrapper .gfield_date_month input, 
+.gform_wrapper .gfield_date_year input{
+	width:94%!important;
+}
+.gform_button{
+    background-color: #2692d8;
+    border: 1px solid #2692d8;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px!important;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    cursor:pointer;
+}
+#applynowform .gform_button{
+     margin-right:40px;
+     float:right;
+}
+#applynowform a{
+     display: inline-block;
+     text-decoration:underline;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_27 {
+    margin-left: 0 !important;
+}
+.gform_wrapper form ul.gform_fields:not(.top_label) li#field_1_37 {
+    margin-left: 0 !important;
+    width:100%;
+}
+.error-message-access {
+	border: 1px solid #dca7a7;
+	/*border-radius: 4px;*/
+	color: #a94442;
+	background-color: #f2dede;
+	padding:15px!important;
+	line-height:1.3em !important;
+}
+.succes-message-left{
+	width: 49%; 
+	text-align: left; 
+	float: left;
+	color:#5e5e5e;
+	line-height:20px;
+}
+.succes-message-right{
+	width: 49%; 
+	text-align: left; 
+	float: left; 
+	margin-left: 15px;
+	line-height:20px;
+	color: #5e5e5e;
+}
+a.btn-confirm-form{
+	background-color:#ccc;
+	color:#2692d8;
+	padding:6px 17px;
+	font-size:13px;
+	text-decoration:none !important;
+}
+.succes-stripe{
+	width: 70%;
+	height: 4px;
+	background-color: #fff;
+}
+
+#vacancydetaildata p{
+	margin-bottom: 20px;
+}
+#vacancydetaildata ul {
+    margin-bottom: 20px;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield select {
+    height: 34px;
+    background-color: #cccccc!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    border-radius: 0!important;
+    background: url(img/arrow-select.svg) no-repeat 97% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 4px 5px!important;
+    background-size: 15px;
+}
+body .gform_wrapper .gform_body input[type=text]{
+	height: 34px;
+}
+#vacancies_noresults {
+    text-align: center;
+    margin: 30px 10%;
+}
+#va_vacancies #filter-form .thefield.checkboxes .select-options li .control {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
